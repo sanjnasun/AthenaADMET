@@ -1,4 +1,5 @@
 from typing import List
+from .similar_compound_model import SimilarCompound
 
 class InputCompound():
 	id: str
@@ -12,11 +13,10 @@ class InputCompound():
 	svg: str
 	smiles_input: str
 	fingerprint: str
+	similar_compounds: List[SimilarCompound] = None
 
 class SmilesUploadRequest():
-	project_id: str
 	smiles_list: List[str]
 
 class SmilesUploadResponse():
-	project_id: str
 	compounds: List[InputCompound]

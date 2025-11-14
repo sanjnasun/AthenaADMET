@@ -1,18 +1,15 @@
-from dataclasses import dataclass
-from app.models.similar_compound_model import SimilarCompound
+from app.models.project_model import (
+	ProjectResponse, 
+	ProjectCreateRequest, 
+	AddCompoundsRequest, 
+	ProjectCreateResponse,
+)
 
-@dataclass
-class Project:
-	id: str
-	name: str
-	inputs: list[str]
-	results: dict[str, list[SimilarCompound]]
-
-def create_project(name: str) -> Project:
+def create_project(req: ProjectCreateRequest) -> ProjectCreateResponse:
 	return
 
-def add_compounds(project_id: str, compounds: list[str]) -> Project:
+def add_compounds(req: AddCompoundsRequest) -> ProjectResponse:
 	return
 
-def get_project_with_results(project_id: str) -> Project:
+def get_project_with_results(project_id: str) -> ProjectResponse:
 	return

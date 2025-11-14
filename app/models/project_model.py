@@ -1,32 +1,17 @@
-from typing import List, Dict
-from .similar_compound_model import SimilarCompound
+from .input_compound_model import SmilesUploadResponse
 
 class ProjectCreateRequest():
-	"""
-	Request body for POST /newProject
-	"""
 	name: str
 
 class AddCompoundsRequest():
-	"""
-	Request body for POST /{project_id}/addCompounds
-	"""
-	compounds: List[str]
+	project_id: str
+	compounds: SmilesUploadResponse
 
 class ProjectResponse():
-	"""
-	Basic project info returned after creation or fetch
-	"""
 	project_id: str
 	name: str
+	compounds: SmilesUploadResponse
 
-class ProjectResultsResponse():
-	"""
-	Returning similarity results in a project
-	inputs is a list of input SMILES for the project
-	results is a mapping of the input SMILES to a list of similar compounds
-	"""
+class ProjectCreateResponse():
 	project_id: str
 	name: str
-	inputs: List[str]
-	results: Dict[str, List[SimilarCompound]]

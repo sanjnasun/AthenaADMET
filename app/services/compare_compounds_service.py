@@ -1,4 +1,4 @@
-from app.models.input_compound_model import InputCompound
+from app.models.input_compound_model import InputCompound, SmilesUploadResponse
 from app.models.similar_compound_model import SimilarCompound
 from typing import List
 
