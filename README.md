@@ -1,9 +1,11 @@
-# AthenaADMET
-LavaLab AthenaADMET Project 
+# AthenaADMET - LavaLab Athena Project 
 
-## To set up Conda venv, use this:
-- conda env create -f environment.yml
-- This makes sure RDKit, Python, and other dependencies are within version constraints and reduces conflicts amongst collaboration
+To Set Up Virtual Environment and FastAPI
 
-## To push, pull, commit, or any git command
-- Do this on regular path without venv
+python -m venv venv
+venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+
+
+To deactivate VENV --> type deactivate in terminal
+To push updates or pull, do it from your regular terminal
